@@ -23,3 +23,6 @@ Data is from experiments carried out with a group of 30 volunteers. Each person 
 4. A column for activity description is added by merging with the activity_labels by activity code, and the activity code column dropped.
 
 5. The tidy data set is then created by grouping by activity and subject and summarising to get the mean of each measure value within those groups.
+
+### Output Dataset:
+The tidy_data data frame consists of 180 rows, ie. 6 activities by 30 persons (subjects). The columns contain the average of the measure values for then mean() and std() type measures as defined above.
