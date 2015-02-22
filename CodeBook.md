@@ -14,3 +14,12 @@ Data is from experiments carried out with a group of 30 volunteers. Each person 
 	X_test			-	measure readings associated with each observation in the test group
 
 ### Transformations:
+1. The subject_train, y_train and X_train data is combined together via a couple of merges by observation number (tow number). The same is done for the test data, and then the two dataframes are bound together to create one large dataframe containing the subject, activity code and measure values for all observations.
+
+2. The columns containing mean and standard deviation data are identified by finding all feature names that contain either 'mean()' or 'std()'. A new data frame is created that contains the subject, activity code and only the mean and std related measure columns.
+
+3. The measure columns are renamed with the actual feature names.
+
+4. A column for activity description is added by merging with the activity_labels by activity code, and the activity code column dropped.
+
+5. The tidy data set is then created by grouping by activity and subject and summarising to get the mean of each measure value within those groups.
